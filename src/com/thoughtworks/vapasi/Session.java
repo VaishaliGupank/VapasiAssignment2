@@ -14,31 +14,23 @@ public abstract class Session {
     private int seatsOccupied;
 
 
-    public Session(String sessionName,SessionRepository sessionRepo) {
+    public Session(String sessionName, int sessionId) {
 
         this.sessionName = sessionName;
-        this.sessionId = sessionRepo.getSessionId();
-    }
-
-    public void setSessionId(int sessionId)
-    {
         this.sessionId = sessionId;
     }
+
 
     public int getSessionId()
     {
         return this.sessionId;
     }
 
-
-    public void SetSessionName(String sessionName)
-    {
-        this.sessionName = sessionName;
-    }
     public String GetSessionName()
     {
         return sessionName;
     }
+
     public void SetSpeakerName(String speakerName)
     {
          this.speakerName = speakerName;

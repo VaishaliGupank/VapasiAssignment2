@@ -2,8 +2,8 @@ package com.thoughtworks.vapasi;
 
 public class VapasiOOPsSession extends Session {
 
-    public VapasiOOPsSession(String sessionName,SessionRepository sessionRepo)
+    public VapasiOOPsSession(String sessionName,int sessionId)
     {
-        super(sessionName,sessionRepo);
+        super(sessionName,sessionId);
     }
 }

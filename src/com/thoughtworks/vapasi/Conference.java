@@ -18,12 +18,6 @@ public abstract class Conference {
        this.sessionRepository =  sessionRepo;
     }
 
-
-    public Conference(String conferenceName)
-    {
-        this.conferenceName = conferenceName;
-    }
-
     public void SetNoOfDays(int noOfDays)
     {
         this.noOfDays = noOfDays;
