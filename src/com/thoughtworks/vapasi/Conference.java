@@ -11,7 +11,13 @@ public abstract class Conference {
     Date startDate;
     Date endDate;
     String venue;
-    List<Session> sessions = new ArrayList<Session>();
+    SessionRepository sessionRepository;
+    public Conference(String conferenceName, SessionRepository sessionRepo)
+    {
+       this.conferenceName = conferenceName;
+       this.sessionRepository =  sessionRepo;
+    }
+
 
     public Conference(String conferenceName)
     {
@@ -66,16 +72,5 @@ public abstract class Conference {
         return this.endDate;
     }
 
-    public List<String> getAvailableSessions()
-    {
-        List<String> sessionsAvailable = new ArrayList<String>();
 
-        for(int i=0; i<sessions.size(); i++)
-        {
-            if(sessions.get(i).IsSessionAvailable())
-                sessionsAvailable.add(sessions.get(i).GetSessionName());
-        }
-
-       return  sessionsAvailable;
-    }
 }

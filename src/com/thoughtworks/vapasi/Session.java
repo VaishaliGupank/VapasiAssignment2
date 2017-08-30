@@ -3,6 +3,9 @@ package com.thoughtworks.vapasi;
 import java.util.Date;
 
 public abstract class Session {
+    /* Auto incremental Field */
+
+    private int sessionId;
     private String sessionName;
     private String speakerName;
     private Date startTime;
@@ -10,9 +13,23 @@ public abstract class Session {
     private int nOfParticipants;
     private int seatsOccupied;
 
-    public Session(String sessionName) {
+
+    public Session(String sessionName,SessionRepository sessionRepo) {
+
         this.sessionName = sessionName;
+        this.sessionId = sessionRepo.getSessionId();
     }
+
+    public void setSessionId(int sessionId)
+    {
+        this.sessionId = sessionId;
+    }
+
+    public int getSessionId()
+    {
+        return this.sessionId;
+    }
+
 
     public void SetSessionName(String sessionName)
     {

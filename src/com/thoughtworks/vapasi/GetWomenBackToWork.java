@@ -2,9 +2,9 @@ package com.thoughtworks.vapasi;
 
 public class GetWomenBackToWork extends Conference {
 
-    public GetWomenBackToWork(String conference)
+    public GetWomenBackToWork(String conference, SessionRepository sessionRepo)
     {
-        super(conference);
+        super(conference, sessionRepo);
     }
 
 
